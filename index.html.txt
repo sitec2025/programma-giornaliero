@@ -7,16 +7,35 @@
 </head>
 <body>
   <h1>Programma di Oggi</h1>
-  <div id="programma"></div>
+  <table id="programma">
+    <thead>
+      <tr>
+        <th>Cantiere</th>
+        <th>Luogo</th>
+        <th>Lavorazioni</th>
+        <th>Collaboratori</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Le righe verranno generate qui -->
+    </tbody>
+  </table>
 
   <script src="programma.js"></script>
   <script>
-    const programma = document.getElementById('programma');
+    const tbody = document.querySelector('#programma tbody');
     dataProgramma.forEach(item => {
-      const div = document.createElement('div');
-      div.innerHTML = `<strong>${item.orario}</strong>: ${item.attività}`;
-      programma.appendChild(div);
+      const tr = document.createElement('tr');
+
+      ['cantiere', 'luogo', 'lavorazioni', 'collaboratori'].forEach(field => {
+        const td = document.createElement('td');
+        td.textContent = item[field];
+        tr.appendChild(td);
+      });
+
+      tbody.appendChild(tr);
     });
   </script>
 </body>
 </html>
+
