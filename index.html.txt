@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Programma di Oggi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Programma di Oggi</h1>
+  <div id="programma"></div>
+
+  <script src="programma.js"></script>
+  <script>
+    const programma = document.getElementById('programma');
+    dataProgramma.forEach(item => {
+      const div = document.createElement('div');
+      div.innerHTML = `<strong>${item.orario}</strong>: ${item.attività}`;
+      programma.appendChild(div);
+    });
+  </script>
+</body>
+</html>

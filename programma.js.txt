@@ -1,0 +1,7 @@
+const dataProgramma = [
+  { orario: "09:00", attività: "Riunione di team" },
+  { orario: "10:30", attività: "Progetto cliente X" },
+  { orario: "13:00", attività: "Pausa pranzo" },
+  { orario: "14:00", attività: "Formazione" },
+  { orario: "16:00", attività: "Feedback giornaliero" }
+];
